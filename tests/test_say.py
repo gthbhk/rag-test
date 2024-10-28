@@ -1,5 +1,4 @@
-from say import Foo, Hoge
-# from main.say import Foo, Hoge
+from src.say import Foo, Hoge
 
 
 def test_foo_say():
@@ -7,7 +6,7 @@ def test_foo_say():
 
 
 def test_foo_say2():
-    assert Foo().say2() == 'foo'  #テストエラーの出力確認。
+    assert Foo().say2() == 'foo2'  #テストエラーの出力確認。
 
 
 def test_hoge_say():

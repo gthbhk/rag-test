@@ -1,7 +1,8 @@
 import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
-from fastapi.openapi.utils import get_openapi # type: ignore
+from fastapi.openapi.utils import get_openapi
+from uvicorn.middleware.wsgi import WSGIMiddleware
 
 app = FastAPI()
 
@@ -18,7 +19,6 @@ def custom_openapi():
     app.openapi_schema = openapi_schema
     return app.openapi_schema
 
-
 app.openapi = custom_openapi
 
 
@@ -26,12 +26,6 @@ class Item(BaseModel):
     name: str
     price: int
 
-@app.get("/",
-         summary="Hello World",
-         description="Hello Worldを返却する",
-         )
-def root():
-    return {"message": "Hello World"}
 
 @app.get("/items/{item_name}",
          summary="アイテムの取得",
