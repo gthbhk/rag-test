@@ -28,7 +28,7 @@ class Item(BaseModel):
 
 @app.get("/",
          summary="Hello World",
-         description="Hello Worldを返却します",
+         description="Hello Worldを返却する",
          )
 def root():
     return {"message": "Hello World"}
