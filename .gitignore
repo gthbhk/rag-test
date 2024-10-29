@@ -11,4 +11,6 @@ venv.bak/
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
-.pyc
+tests/__pycache__/test_calc.cpython-311-pytest-7.4.4.pyc
+tests/__pycache__/test_main.cpython-311-pytest-7.4.4.pyc
+tests/__pycache__/test_say.cpython-311-pytest-7.4.4.pyc
