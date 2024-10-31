@@ -27,28 +27,28 @@ class Item(BaseModel):
     price: int
 
 
-@app.get("/items/{item_name}",
-         summary="アイテムの取得",
-         description="アイテムの名前を指定して取得します",
-         )
-def get_item(item_name: str):
-    return {"name": item_name, "price": 200}
+# @app.get("/items/{item_name}",
+#          summary="アイテムの取得",
+#          description="アイテムの名前を指定して取得します",
+#          )
+# def get_item(item_name: str):
+#     return {"name": item_name, "price": 200}
 
 
-@app.post("/items/new",
-          summary="アイテムの追加",
-          description="アイテムを追加します",
-          )
-def add_item(item: Item):
-    return item
+# @app.post("/items/new",
+#           summary="アイテムの追加",
+#           description="アイテムを追加します",
+#           )
+# def add_item(item: Item):
+#     return item
 
 
-@app.get("/call_aoai",
-         summary="aoaiを呼び出す",
-         description="aoaiを呼び出します",
-         )
-def call_aoai():
-    return {"result": "aoai called"}
+# @app.get("/call_aoai",
+#          summary="aoaiを呼び出す",
+#          description="aoaiを呼び出します",
+#          )
+# def call_aoai():
+#     return {"result": "aoai called"}
 
 
 if __name__ == "__main__":
