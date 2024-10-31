@@ -1,2 +1,3 @@
 # Hello Worldを返却する
-print("Hello World")
+def hello_world():
+    print("Hello World")
