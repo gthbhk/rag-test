@@ -31,7 +31,7 @@ class Item(BaseModel):
          summary="アイテムの取得",
          description="アイテムの名前を指定して取得します",
          )
-def get_item(item_name):
+def get_item(item_name: str):
     return {"name": item_name, "price": 200}
 
 
@@ -41,6 +41,14 @@ def get_item(item_name):
           )
 def add_item(item: Item):
     return item
+
+
+@app.get("/call_aoai",
+         summary="aoaiを呼び出す",
+         description="aoaiを呼び出します",
+         )
+def call_aoai():
+    return {"result": "aoai called"}
 
 
 if __name__ == "__main__":
