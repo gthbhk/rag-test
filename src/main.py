@@ -2,7 +2,6 @@ import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.openapi.utils import get_openapi
-from uvicorn.middleware.wsgi import WSGIMiddleware
 
 app = FastAPI()
 

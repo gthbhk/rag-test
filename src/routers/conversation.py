@@ -2,6 +2,8 @@ from fastapi import APIRouter
 from pydantic import BaseModel
 import uvicorn
 
+import openai_apikey_request_sample
+
 router = APIRouter()
 
 
@@ -22,7 +24,8 @@ def add_item(item: Item):
 
 @router.get("/call_aoai")
 def call_aoai():
-    return {"result": "aoai called"}
+    return openai_apikey_request_sample.get_conversation()
+    # return {"result": "aoai called"}
 
 
 if __name__ == "__main__":
