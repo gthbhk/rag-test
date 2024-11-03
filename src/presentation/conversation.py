@@ -2,7 +2,6 @@ from fastapi import APIRouter
 from pydantic import BaseModel
 import uvicorn
 
-# import business_logic.conversation_service as conversation_service
 import src.business_logic.conversation_service as conversation_service
 
 router = APIRouter()
